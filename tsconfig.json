@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",              // Use the ES module format
+      "target": "ESNext",              // Compile to ESNext (latest JavaScript)
+      "moduleResolution": "node",      // Resolve modules like Node.js
+      "esModuleInterop": true,         // Enable interop between CommonJS and ES modules
+      "allowJs": true,                 // Allow JavaScript files to be included
+      "skipLibCheck": true,            // Skip type checking of declaration files
+      "strict": true,                  // Enable strict type-checking
+      "outDir": "./dist"               // Output compiled files to dist folder
+    },
+    "include": ["src/**/*"],           // Include all TypeScript files in src folder
+    "exclude": ["node_modules"]        // Exclude node_modules
+  }
+  
