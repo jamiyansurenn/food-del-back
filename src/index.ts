@@ -2,10 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import { configDotenv } from "dotenv";
 import cors from "cors";
-import categoriesRouter from "./routes/categories.route.js";
-import foodsInfoRoute from "./routes/foodsInfo.route.js";
-import userRoute from "./routes/auth.route.js";
-import { connectMongoDb } from "./database/db.js";
+import { connectMongoDb } from "./database/db";
+import categoriesRouter from "./routes/categories.route";
+import foodsInfoRoute from "./routes/foodsInfo.route";
+import userRoute from "./routes/auth.route";
+
 const app = express();
 configDotenv();
 connectMongoDb();

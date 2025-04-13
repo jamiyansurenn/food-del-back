@@ -25,4 +25,4 @@ const FoodsInfoSchema: Schema = new Schema(
   }
 );
 
-export default mongoose.model<FoodInfoSchemaType>("foodsInfo", FoodsInfoSchema);
+export default mongoose.model<FoodInfoSchemaType>("food", FoodsInfoSchema);

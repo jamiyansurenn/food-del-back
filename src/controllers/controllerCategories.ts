@@ -4,10 +4,12 @@ import foodCategoryModel from "../models/food-category-model";
 export const CreateCategory: RequestHandler = async (req, res) => {
   try {
     const categoryData = req.body;
+    console.log("sdada",categoryData)
     const newCategory = await foodCategoryModel.create(categoryData);
     res.status(200).json({ message: "success added category", newCategory });
   } catch (error) {
     res.status(500).json({ message: "Error in CreateCategory", error });
+    console.log(error)
   }
 };
 

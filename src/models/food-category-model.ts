@@ -3,8 +3,6 @@ import mongoose, { Schema } from "mongoose";
 type FoodCategorySchemaType = {
   categoryName: string;
 };
- 
- 
 
 const FoodCategorySchema: Schema = new Schema(
   {
@@ -19,6 +17,6 @@ const FoodCategorySchema: Schema = new Schema(
 );
 
 export default mongoose.model<FoodCategorySchemaType>(
-  "FoodCategory",
+  "food-delvery", 
   FoodCategorySchema
 );
