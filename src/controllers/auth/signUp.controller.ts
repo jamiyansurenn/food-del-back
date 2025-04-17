@@ -1,5 +1,5 @@
 import { hashSync } from "bcryptjs";
-import userModel from "../../models/user.model";
+import { User } from "../../models/user.model";
 import { Request, RequestHandler, Response } from "express";
 
 export  const signUp = async (req: Request, res: Response) => {
@@ -11,7 +11,7 @@ export  const signUp = async (req: Request, res: Response) => {
       return;
     }
     const hashedPassword = hashSync(password, 10);
-    const createUser = await userModel.create({
+    const createUser = await User.create({
       email,
       password: hashedPassword,
     });
@@ -25,7 +25,7 @@ export  const signUp = async (req: Request, res: Response) => {
 
 export  const getUsers: RequestHandler = async (req, res) => {
   try {
-    const AllUsers = await userModel.find();
+    const AllUsers = await User.find();
     res.status(200).json({ message: "success get category", data: AllUsers });
   } catch (error) {
     res.status(500).json({ message: "Error in getCategories", error });

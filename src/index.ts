@@ -7,8 +7,8 @@ import categoriesRouter from "./routes/categories.route";
 import foodsInfoRoute from "./routes/foodsInfo.route";
 import userRoute from "./routes/auth.route";
 
-const app = express();
 configDotenv();
+const app = express();
 connectMongoDb();
 const port = process.env.PORT;
 
